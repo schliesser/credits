@@ -65,7 +65,7 @@
       "rm -rf Tests",
       "rm .editorconfig",
       "rm .gitattributes",
-      "rm .php-cs-fixer.php"
+      "rm .php-cs-fixer.dist.php"
     ]
   },
   "extra": {

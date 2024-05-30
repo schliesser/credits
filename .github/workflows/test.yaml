@@ -28,7 +28,7 @@ jobs:
             - name: "Install composer dependencies"
               run: composer install --no-progress
             - name: "Run PHP-CS-Fixer"
-              run: "composer run-script test-php-cs-fixer"
+              run: "composer run-script test-fixer"
 
     phpstan:
         runs-on: ubuntu-latest
