@@ -25,10 +25,10 @@ class CopyrightRepository
     /**
      * @return array<int, array{file: File, pages: non-empty-array<int, int>}>
      */
-    public function findBySite(Site $site, string $mimeTypeFilter = 'image/%'): array
+    public function findBySite(Site $site, string $mimeTypeFilter = 'image/%', int $depth = 100): array
     {
         // first fetch all pages in a specific site
-        $pageIds = $this->pageRepository->getDescendantPageIdsRecursive($site->getRootPageId(), 4);
+        $pageIds = $this->pageRepository->getDescendantPageIdsRecursive($site->getRootPageId(), $depth);
         $pageIds[] = $site->getRootPageId();
 
         $queryBuilder = $this->connectionPool->getQueryBuilderForTable('sys_file_reference');
