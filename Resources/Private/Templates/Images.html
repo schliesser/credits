@@ -7,15 +7,17 @@
         <f:for as="image" each="{images}">
             <f:if condition="{image.file.metaData.copyright} && {image.pages}">
                 <li>
-                    <span>{f:if(condition: image.file.metaData.title, then: '{image.file.metaData.title} - ')}{image.file.metaData.copyright -> f:format.html(parseFuncTSPath: 'lib.parseFunc')}</span>
-                    <span>{f:translate(key: 'usage')}</span>
-                    <ul>
-                        <f:for as="page" each="{image.pages}">
-                            <li>
-                                <f:link.typolink parameter="{page}"/>
-                            </li>
-                        </f:for>
-                    </ul>
+                    <span>{f:if(condition: image.file.metaData.title, then: image.file.metaData.title, else: image.file.name)} - {image.file.metaData.copyright -> f:format.html(parseFuncTSPath: 'lib.parseFunc')}</span>
+                    <div>
+                        <span>{f:translate(key: 'usage')}</span>
+                        <ul>
+                            <f:for as="page" each="{image.pages}">
+                                <li>
+                                    <f:link.typolink parameter="{page}"/>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </div>
                 </li>
             </f:if>
         </f:for>

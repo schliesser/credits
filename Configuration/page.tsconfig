@@ -1,0 +1,17 @@
+# Deprecated: For TYPO3 12 only
+mod.wizards.newContentElement.wizardItems {
+  special {
+    elements {
+      credits_images {
+        iconIdentifier = tx-credits-images
+        title = LLL:EXT:credits/Resources/Private/Language/locallang_db.xlf:element.label
+        description = LLL:EXT:credits/Resources/Private/Language/locallang_db.xlf:element.description
+        tt_content_defValues {
+          CType = credits_images
+        }
+      }
+    }
+
+    show := addToList(credits_images)
+  }
+}
