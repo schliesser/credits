@@ -1,0 +1,13 @@
+/.Build/ export-ignore
+/Tests/ export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.github/ export-ignore
+/.gitignore export-ignore
+/.gitlab-ci.yml export-ignore
+/.scrutinizer export-ignore
+/.styleci.yml export-ignore
+/.travis.yml export-ignore
+/.php_cs.dist export-ignore
+/.php-cs-fixer.dist.php export-ignore
+/,phpstan.neon export-ignore
